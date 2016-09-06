@@ -74,44 +74,13 @@
       else window.addEventListener('load', loadDeferredStyles);
     </script> <!-- NAVIGATION BAR SIT ON TOP -->
     <div class="Llama-top Llama-center">
-       <!-- <ul class="Llama-navbar" id="myNavbar">
-            <li style="margin-left:0px;">
-                <a class="Llama-padding-large Llama-hover-red" href=
-                "#home">HOME</a>
-            </li>
-            <li>
-                <a class="Llama-padding-large Llama-hover-red" href=
-                "#about">LlAMA'S</a>
-            </li>
-            
-             <li>
-                <a class="Llama-padding-large Llama-hover-red" href=
-                "#invader">INVADERS</a>
-            </li>
-            
-             <li>
-                <a class="Llama-padding-large Llama-hover-red" href=
-                "#masterPlan">PLAN</a>
-            </li>
-            
-            <li>
-                <a class="Llama-padding-large Llama-hover-red" href=
-                "#about">ABOUT </a>
-            </li>
-             <li class="icon">
-    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">Menu</a>
-  </li>
-        </ul> -->
-        
-        
-        
          <ul class="topnav" id="myTopnav">
-                <li><a class="active" href="#home">Home</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a class="Llama-padding-large Llama-hover-red" href="#home">Home</a></li>
+                <li><a class="Llama-padding-large Llama-hover-red" href="#about">LlAMA'S</a></li>
+                <li><a class="Llama-padding-large Llama-hover-red" href="#invader">INVADER</a></li>
+                <li><a class="Llama-padding-large Llama-hover-red" href="#about">ABOUT</a></li>
                 <li class="icon">
-                <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+                <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()"> ☰</a>
                 </li>
             </ul>
     </div><!-- First Parallax Image with Logo Text -->
@@ -479,16 +448,7 @@
     document.getElementById("modal01").style.display = "block";
     }
 
-    // Change style of navbar on scroll
-    window.onscroll = function() {myFunction()};
-    function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "Llama-navbar" + " Llama-card-2" + " Llama-animate-top" + " Llama-white";
-    } else {
-        navbar.className = navbar.className.replace(" Llama-card-2 Llama-animate-top Llama-white", "");
-    }
-    }
+  
     </script>
 </body>
 </html>
