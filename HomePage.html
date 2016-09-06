@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Llama To Rescue</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- INLINE CSS TO OPTIMIZE CSS DELIVERY -->
+
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+    body, html {height: 100%;color: #777;line-height: 1.8;}
+
+    /* STYLE SHEETS FOR CREATING PARALLAX EFFECT*/
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 { opacity: 1; background-attachment: fixed;background-position: center;
+    background-repeat: no-repeat;background-size: cover;}
+    .bgimg-1 {background-image: url('images/image-set2.jpg');min-height: 100%;margin-top: 50px;}
+    .bgimg-2 {background-image: url("images/image-set4.jpg");min-height: 400px; }
+    .bgimg-3 {background-image: url("images/image-set5.jpg");min-height: 400px;}
+    .bgimg-4 {background-image: url("images/SocialGoodImpact.png");min-height: 400px;}
+    .Llama-wide {letter-spacing: 10px;}
+    .Llama-hover-opacity {cursor: pointer;}
+    #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+    }
+
+    /* NO PARALLAX EFFECT FOR TABLET AND MOBILE DEVICES*/
+    @media only screen and (max-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+        background-attachment: scroll;
+        
+    }
+        #showEnemyIDFluctus{
+            display:none;
+        }
+         #showEnemyID{
+            display:none;
+        }
+    }
+        
+    /* MODAL FOR DISPLAYING ENEMIES  */
+    .showEnemy { display: none;  position: fixed;  z-index: 1; left: 0;top: 0;width: 100%; 
+    height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4); }
+    .showEnemyContent {background-color: #fefefe; margin: auto; border: 1px solid #888;width: 80%;height:auto;display:block;
+     overflow:auto;}
+    .close {color: #aaaaaa;float: right;font-size: 28px;font-weight: bold;}
+    .close:hover,.close:focus {  color: #000; text-decoration: none;cursor: pointer;}
+     .closeF {color: #aaaaaa;float: right;font-size: 28px;font-weight: bold;}
+    .closeF:hover,.closeF:focus {  color: #000; text-decoration: none;cursor: pointer;}
+
+
+    </style>
+</head>
+<body>
+    <noscript id="deferred-download">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href=
+    "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"
+    rel="stylesheet">
+    <link href="images/meetLlama.jpg" rel="shortcut icon"></noscript> 
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-download");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script> <!-- NAVIGATION BAR SIT ON TOP -->
+    <div class="Llama-top Llama-center">
+        <ul class="Llama-navbar" id="myNavbar">
+            <li style="margin-left:0px;">
+                <a class="Llama-padding-large Llama-hover-red" href=
+                "#home">HOME</a>
+            </li>
+            <li>
+                <a class="Llama-padding-large Llama-hover-red" href=
+                "#about">LlAMA'S</a>
+            </li>
+            
+             <li>
+                <a class="Llama-padding-large Llama-hover-red" href=
+                "#invader">INVADERS</a>
+            </li>
+            
+             <li>
+                <a class="Llama-padding-large Llama-hover-red" href=
+                "#masterPlan">PLAN</a>
+            </li>
+            
+            <li>
+                <a class="Llama-padding-large Llama-hover-red" href=
+                "#about">ABOUT </a>
+            </li>
+        </ul>
+    </div><!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 Llama-opacity Llama-display-container" id="home">
+        <div class="Llama-col m12 Llama-center Llama-section">
+            <!--<div><img alt="Photo of Me" class="Llama-circle-banner" src=
+            "images/MilindTambe.jpg"></div>
+            <div class=" banner-text-margin">
+                <div class="banneroverlay">
+                    Milind Tambe
+                </div><br>
+                <div class="banneroverlay">
+                    Helen N. and Emmett H. Jones Professor in Engineering
+                </div><br>
+                <div class="banneroverlay">
+                    Professor, Computer Science &amp; Industrial and Systems
+                    Engineering Departments
+                </div><br>
+                <div class="banneroverlay">
+                    Director, <a href="http://teamcore.usc.edu/">Teamcore
+                    Research Group on Artificial Intelligence and Multiagent
+                    Systems</a>
+                </div><br>
+                <div class="banneroverlay">
+                    University of Southern California
+                </div><br>
+                <div class="banneroverlay">
+                    Co-Founder and Director of Research, <a href=
+                    "http://www.armorway.com/">ARMORWAY Inc.</a>
+                </div><br>
+                <div class="banneroverlay">
+                    <a href="http://teamcore.usc.edu/tambe/CV.pdf" target=
+                    "_blank">Curriculum vitae [pdf]</a>
+                </div>
+            </div>-->
+        </div>
+    </div><!-- Container (About Section) -->
+    <div class="Llama-content Llama-container Llama-padding-64 textPara" id="about">
+        <h3 class="Llama-center">ABOUT US</h3>
+        <p class="Llama-center"><em>WHO WE ARE</em></p>
+        <p>Llamas consist of the vicuna, guanaco, Suri alpaca, and Huacaya
+        alpaca , and the domestic llama. Guanacos and vicunas live in the wild,
+        while alpacas as well as llamas exist only as domesticated animals.
+        Seriously!!! Do you want to know who we are and from where we belong
+        instead of knowing how we will protect the earth from alien invasion
+        using our Llama powers. If your answer is still yes, Let us give you
+        some fun facts about ourself.</p>
+        <div class="Llama-row">
+            <div class="Llama-col m6 Llama-center Llama-section"><img alt=
+            "Photo of Llama" class="Llama-circle" src=
+            "images/meetLlama.jpg"></div><!-- Hide this text on small devices -->
+            <div class="Llama-col m6 Llama-hide-small Llama-section">
+                <p>We originated from the central plains of North America about
+                40 million years ago and because of our magical powers we are
+                able to survive the Ice Age and hence still exist on the
+                Earth.</p>
+                <p>We are very social and intelligent mammals and learn simple
+                tasks after a few repitition. We also have excellent senses for
+                smell, hearing and eyesight used for detection of potential
+                danger.</p>
+                <p>We live for twenty to thirty years. (As known to humans, but
+                actually after thirty years we move to our home planet (Tractu
+                Galaxy) using "Time Travelling" power)</p>
+                <p>On Earth we live as mammals help humans to transport
+                materials from one place to another.</p>
+            </div>
+        </div>
+    </div><!-- SECOND PARALLAX IMAGE WITH THE ACTION PLAN CONTENT -->
+    <div class="bgimg-2 Llama-display-container">
+        <div class="Llama-display-middle">
+            <!-- <span class="Llama-xxlarge Llama-text-light-grey Llama-wide">The Plan</span>-->
+        </div>
+    </div><!-- Container (Portfolio Section) -->
+    <div class="Llama-content Llama-container Llama-padding-64 textPara" id ="invader" >
+        <h3 class="Llama-center">Invader</h3>
+        <p class="Llama-center"><em>The Invasion is carried out by Wicked King Dorhinto, ruler  
+            of the dark planet "Nesto-Galactus" along with his trusted sepoys among which the 
+            most important is "Fluctus: The shadow of death". It is believed that he never lost
+            any battle and supernatural powers that can destroy any planet at once.</em></p><br>
+        
+        
+         <div class= "Llama-col s12" >
+              <div class= "Llama-col s6" id ="dorhinto">
+              <img src="images/dorhinto.png" class="Llama-left" width="60%" alt="Dorhinto: The wicked Ruler">
+              </div>
+             
+              <div class= "Llama-col s6" id ="fluctus">
+             <img src="images/Fluctus.jpg" class="Llama-left" width="60%" alt="Fluctus: The Invincible">
+              </div>
+        
+        </div>
+       
+         
+        <!-- MODAL FOR VARIOUS ENEMIES -->
+        <div class="showEnemy" id="showEnemyID">
+            <!-- Modal content -->
+            <div class="showEnemyContent">
+                <span class="close "> X</span>
+                <div class="Llama-col s12 showEnemyMargin">
+                    <div class="Llama-col s6 ">
+                         <img src="images/dorhinto.png" class="Llama-left" width="100%" alt="Dorhinto: The wicked Ruler">
+                    </div>
+                     <div class="Llama-col s6 textPadding">
+                         <span>Title: King</span><br><hr>
+                          <span>Planet: Nesto-Galactus</span><br><hr>
+                          <span>Weapon: Black Hole Manipulation</span><br><hr>
+                          <span>Kills:  Sixty Planets</span><br><hr>
+                          <span>Age: Six million years</span><br><hr>
+                         <span>Win : 86%</span><br><hr>
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- MODAL FOR FLUCTUS -->
+         <div class="showEnemy" id="showEnemyIDFluctus">
+            <!-- Modal content -->
+            <div class="showEnemyContent">
+                <span class="closeF "> X</span>
+                <div class="Llama-col s12 showEnemyMargin">
+                    <div class="Llama-col s6 ">
+                         <img src="images/Fluctus.jpg" class="Llama-left" width="100%" alt="Fluctus: The Invincible">
+                    </div>
+                     <div class="Llama-col s6 textPadding">
+                        <span>Title: Knight</span><br><hr>
+                          <span>Planet: Nesto-Galactus</span><br><hr>
+                          <span>Weapon: Elecro-Galactic Shocks</span><br><hr>
+                          <span>Kills:  Forty-Four Planets</span><br><hr>
+                          <span>Age: one million years</span><br><hr>
+                         <span>Win : 98%</span><br><hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><hr>
+        
+       
+        <!-- MODAL FOR FLUCTUS -->
+       
+        
+        <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+        <!--<div class="Llama-row-padding Llama-center">
+            <div class="Llama-col m6">
+                <a href=
+                "http://teamcore.usc.edu/people/Paws/index.html"><img class=
+                "Llama-hover-opacity" src="images/pawsimage.png" style=
+                "width:100%"></a>
+            </div>
+            <div class="Llama-col m6">
+                <a href=
+                "http://teamcore.usc.edu/projects/security/"><img class="Llama-hover-opacity"
+                src="images/PortSecurity.JPG" style="width:100%"></a>
+            </div>
+            <div class="Llama-col m6">
+                <a href=
+                "http://teamcore.usc.edu/projects/TRUSTS/default.html"><img class="Llama-hover-opacity"
+                src="images/LAMetro.jpeg" style="width:100%"></a>
+            </div>
+            <div class="Llama-col m6">
+                <a href=
+                "http://teamcore.usc.edu/people/SocialGood/index.html"><img class="Llama-hover-opacity"
+                src="images/socialgood.png" style="width:100%"></a>
+            </div>
+        </div> -->
+        <!-- <div class="Llama-row-padding Llama-center Llama-section">
+    <div class="Llama-col m3">
+      <img src="images/fisheries.png" style="width:100%" onclick="onClick(this)" class="Llama-hover-opacity">
+    </div>
+
+    <div class="Llama-col m3">
+      <img src="images/gametheory.png" style="width:100%" onclick="onClick(this)" class="Llama-hover-opacity">
+    </div>
+
+    <div class="Llama-col m3">
+      <img src="images/protectproject.png" style="width:100%" onclick="onClick(this)" class="Llama-hover-opacity">
+    </div>
+
+    <div class="Llama-col m3">
+      <img src="images/teamformation.png" style="width:100%" onclick="onClick(this)" class="Llama-hover-opacity">
+    </div>
+  </div>-->
+    
+    </div><!-- Modal for full size images on click-->
+    <div class="Llama-modal Llama-black" id="modal01" onclick=
+    "this.style.display='none'">
+        <span class=
+        "Llama-closebtn Llama-hover-red Llama-text-white Llama-xxxlarge Llama-container Llama-display-topright">
+        &times;</span>
+        <div class=
+        "Llama-modal-content Llama-animate-zoom Llama-center Llama-transparent Llama-padding-64">
+        <img id="img01" style="max-width:100%"></div>
+    </div><!-- Third Parallax Image with Portfolio Text -->
+    <div class="bgimg-3 Llama-display-container">
+        <div class="Llama-display-middle">
+            <!--<span class="Llama-xxlarge Llama-text-light-grey Llama-wide">CONTACT</span>-->
+        </div>
+    </div>
+    <div class="Llama-content Llama-container Llama-padding-64" id="masterPlan">
+        
+         <div class="">
+         <h3 class="Llama-center ">The Master Plan</h3>
+        <p class="Llama-center"><em>Since Llama exist in human form on Earth for million of years so one of the llama 
+            "The Furry One" befriended one of the member of the enemy team and got all the invasion strategy. The Llama
+            decided to use the known strategy to help human against invason.Llama "The Furry One"  is also able to 
+            get the secret information regarding how to kill "Dorhinto:The Wicked King" and "Fluctus: The Invincible".
+            However, it is not that easy so, they are devising a master plan to separate Dorinto and Fluctus and then
+            to fight with them individually. If the plan is successful then there is peace and calm in entire universe.
+            Some aliens from other planets  are also  with human race to fight against the The Wicked King. </em></p><br>
+        
+            </div>
+       
+        <hr>
+        
+     
+    </div><!-- Fourth Parallax Image with Portfolio Text -->
+    <div class="bgimg-4 Llama-display-container">
+        <div class="Llama-display-middle">
+            <!--<span class="Llama-xxlarge Llama-text-light-grey Llama-wide">CONTACT</span>-->
+        </div>
+    </div><!-- Container (Contact Section) -->
+    <div class="Llama-content Llama-container Llama-padding-64">
+        <h5 class="Llama-center">ABOUT MYSELF</h5><br>
+        <div id="short-bio" style=
+        "text-align:justify; text-justify:inter-word;">
+           <p>My name is Vivek and i am graduate student at University Of Southern California. Currently,
+           I am working as a Webmaster/ Administrator for Teamcore Research Group at University of 
+            Southern California. My research interest include Responsive web design, Enterprise mobile web
+            applications. I have three years working experience in responsive web design and front end web 
+            technologies designing enterprise application for fortune 100 companies. I've played roles of a 
+            team lead, scrum master, intern trainer, to say the least.</p>
+            
+            <p>When not coding, i generally prefer to read books about art and design. They helps me to understand
+            intricate things about design . I also love to hang out with people coming from different cultures because i believe
+            it is the best way to gain knowledge and experience.</p>
+            
+        
+        
+        </div>
+        <!-- <div class="Llama-center"> Helen N. and Emmett H. Jones Professor in Engineering </div>
+    <div class="Llama-center"> Professor, Computer Science &amp; Industrial and Systems Engineering Departments</div>
+    <div class="Llama-center"> Director, Teamcore Research Group on Artificial Intelligence and Multiagent Systems </div>
+    <div class="Llama-center"> University of Southern California</div>
+  <p class="Llama-center"><em> Co-Founder and Director of Research, ARMORWAY Inc.</em></p>-->
+        <br>
+        <br>
+        <h5 class="Llama-center">Contact Information</h5>
+        <div class="Llama-row Llama-padding-32 Llama-section">
+            <div class="Llama-col m12 Llama-container Llama-section">
+                <div class="Llama-large Llama-margin-bottom Llama-center">
+                    <i class="fa fa-map-marker Llama-hover-text-black" style=
+                    "width:30px"></i> 941 Bloom Walk, SAL 300, Los Angeles, CA
+                    90089, US<br>
+                    <i class="fa fa-phone Llama-hover-text-black" style=
+                    "width:30px"></i> Phone: (213)740-6447<br>
+                    <i class="fa fa-envelope Llama-hover-text-black" style=
+                    "width:30px"></i> Email: tambe @usc.edu<br>
+                </div>
+                <div class="Llama-center">
+                    Leave a Note?
+                </div><br>
+                <hr>
+                <br>
+                <div class="Llama-row-padding Llama-center" style=
+                "margin:0 -16px 8px -16px">
+                    <div class="Llama-half">
+                        <input class=
+                        "Llama-input Llama-border Llama-hover-light-grey"
+                        placeholder="Name" type="text">
+                    </div>
+                    <div class="Llama-half">
+                        <input class=
+                        "Llama-input Llama-border Llama-hover-light-grey"
+                        placeholder="Email" type="text">
+                    </div>
+                </div><input class=
+                "Llama-input Llama-border Llama-hover-light-grey" placeholder=
+                "Comment" type="text"> <button class=
+                "Llama-btn Llama-section Llama-right">SEND</button>
+            </div>
+        </div>
+    </div><!-- Footer
+<footer class="Llama-center Llama-dark-grey Llama-padding-48 Llama-hover-black">
+ <p></p>
+</footer>-->
+    <!-- Add Google Maps -->
+    <script src="http://maps.googleapis.com/maps/api/js">
+    </script> 
+    <script>
+        
+    /* MODAL POPUP FOR VIEWING ENEMIES */
+    var modal = document.getElementById('showEnemyID');
+    var btn = document.getElementById("dorhinto");
+    var span = document.getElementsByClassName("close")[0];
+
+     btn.onclick = function() {
+    modal.style.display = "block";
+    }
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
+    
+    
+    var modalF = document.getElementById('showEnemyIDFluctus');
+    var btnF = document.getElementById("fluctus");
+   var spanF = document.getElementsByClassName("closeF")[0];
+
+     btnF.onclick = function() {
+    modalF.style.display = "block";
+    }
+    spanF.onclick = function() {
+    modalF.style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+    if (event.target == modalF) {
+        modalF.style.display = "none";
+    }
+    }
+    
+    
+
+
+
+    var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+
+    function initialize() {
+    var mapProp = {
+    center:myCenter,
+    zoom:12,
+    scrollwheel:false,
+    draggable:false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+    var marker = new google.maps.Marker({
+    position:myCenter,
+    });
+
+    marker.setMap(map);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    // Modal Image Gallery
+    function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    }
+
+    // Change style of navbar on scroll
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "Llama-navbar" + " Llama-card-2" + " Llama-animate-top" + " Llama-white";
+    } else {
+        navbar.className = navbar.className.replace(" Llama-card-2 Llama-animate-top Llama-white", "");
+    }
+    }
+    </script>
+</body>
+</html>
