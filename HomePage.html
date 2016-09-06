@@ -74,7 +74,7 @@
       else window.addEventListener('load', loadDeferredStyles);
     </script> <!-- NAVIGATION BAR SIT ON TOP -->
     <div class="Llama-top Llama-center">
-        <ul class="Llama-navbar" id="myNavbar">
+       <!-- <ul class="Llama-navbar" id="myNavbar">
             <li style="margin-left:0px;">
                 <a class="Llama-padding-large Llama-hover-red" href=
                 "#home">HOME</a>
@@ -98,7 +98,22 @@
                 <a class="Llama-padding-large Llama-hover-red" href=
                 "#about">ABOUT </a>
             </li>
-        </ul>
+             <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">Menu</a>
+  </li>
+        </ul> -->
+        
+        
+        
+         <ul class="topnav" id="myTopnav">
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li class="icon">
+                <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+                </li>
+            </ul>
     </div><!-- First Parallax Image with Logo Text -->
     <div class="bgimg-1 Llama-opacity Llama-display-container" id="home">
         <div class="Llama-col m12 Llama-center Llama-section">
@@ -423,6 +438,15 @@
     }
     }
     
+    /*RESPONSIVE MENU BAR*/
+    function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
     
 
 

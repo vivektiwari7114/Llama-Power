@@ -382,12 +382,90 @@ input[type=checkbox].Llama-check:disabled+.Llama-validate,input[type=radio].Llam
 
 }
 
+@media screen and (max-width:680px) {
+  ul.Llama-navbar.responsive {position: relative;}
+  ul.Llama-navbar.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.Llama-navbar.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.Llama-navbar.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+
+@media screen and (max-width:680px) {
+  ul.Llama-navbar li:not(:first-child) {display: none;}
+  ul.Llama-navbar li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* TOP NAVIGATION */
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
 @media (max-width:600px){.Llama-modal-content{margin:0 10px;width:auto!important}.Llama-modal{padding-top:30px}}
 @media (max-width:768px){.Llama-modal-content{width:500px}.Llama-modal{padding-top:50px}}
 @media (min-width:993px){.Llama-modal-content{width:900px}}
+/*
 @media screen and (max-width:600px){.Llama-topnav a{display:block}.Llama-navbar li:not(.Llama-opennav){float:none;width:100%!important}.Llama-navbar li.Llama-right{float:none!important}}	
 @media screen and (max-width:600px){.Llama-topnav .Llama-dropdown-hover .Llama-dropdown-content,.Llama-navbar .Llama-dropdown-click .Llama-dropdown-content,.Llama-navbar .Llama-dropdown-hover .Llama-dropdown-content{position:relative}}	
-@media screen and (max-width:600px){.Llama-topnav,.Llama-navbar{text-align:center}}
+@media screen and (max-width:600px){.Llama-topnav,.Llama-navbar{text-align:center}}  */
 @media (max-width:600px){.Llama-hide-small{display:none!important}}
 @media (max-width:992px) and (min-width:601px){.Llama-hide-medium{display:none!important}}
 @media (min-width:993px){.Llama-hide-large{display:none!important}}
