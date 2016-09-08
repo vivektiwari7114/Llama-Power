@@ -417,7 +417,7 @@ ul.topnav {
   background-color: #fff;
 }
 
-ul.topnav li {float: left;}
+ul.topnav li {display: inline-block;}
 
 ul.topnav li a {
   display: inline-block;
@@ -444,6 +444,7 @@ ul.topnav li.icon {display: none;}
 
 @media screen and (max-width:680px) {
   ul.topnav.responsive {position: relative;}
+    ul.topnav li {float:left;}
   ul.topnav.responsive li.icon {
     position: absolute;
     right: 0;
