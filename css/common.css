@@ -91,7 +91,9 @@ ul.Llama-ul li{padding:6px 2px 6px 16px;border-bottom:1px solid #ddd}
 ul.Llama-ul li:last-child{border-bottom:none}
 .Llama-tooltip,.Llama-display-container{position:relative}
 .Llama-fluid{max-width:100%;height:auto}
-
+.Llama-banner-content{color: white;font-size: 3.2em;}
+.Llama-pos-main{top:150px; text-align: center;vertical-align: middle;}
+.Llama-pos-title{ font-size: 1.2em;!important}
 .Llama-tooltip:hover .Llama-text{display:inline-block}
 .Llama-navbar{list-style-type:none;margin:0;padding:0;overflow:hidden}
 .Llama-navbar li{float:left}.Llama-navbar li a,.Llama-navitem{display:block;padding:8px 16px}.Llama-navbar li a:hover{color:#000;background-color:#ccc}
@@ -396,69 +398,34 @@ input[type=checkbox].Llama-check:disabled+.Llama-validate,input[type=radio].Llam
 
 @media screen and (max-width:680px) {
   ul.Llama-navbar.responsive {position: relative;}
-  ul.Llama-navbar.responsive li.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  ul.Llama-navbar.responsive li {
-    float: none;
-    display: inline;
-  }
-  ul.Llama-navbar.responsive li a {
-    display: block;
-    text-align: left;
-  }
+  ul.Llama-navbar.responsive li.icon {position: absolute;right: 0;top: 0; }
+  ul.Llama-navbar.responsive li {float: none;display: inline;}
+  ul.Llama-navbar.responsive li a {display: block;text-align: left;}
 }
-
-
-
 @media screen and (max-width:730px) {
- 
-   
-    #showEnemyIDFluctus{ visibility: hidden;}
+   #showEnemyIDFluctus{ visibility: hidden;}
     #showEnemyID{visibility: hidden;}
 }
 
 @media screen and (max-width:680px) {
   ul.Llama-navbar li:not(:first-child) {display: none;}
-  ul.Llama-navbar li.icon {
-    float: right;
-    display: inline-block;
-  }
+  ul.Llama-navbar li.icon {float: right;display: inline-block;}
 }
 
 /* TOP NAVIGATION */
-ul.topnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #fff;
-}
+ul.topnav {list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;}
 
 ul.topnav li {display: inline-block;}
 
-ul.topnav li a {
-  display: inline-block;
-  color: #000;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  transition: 0.3s;
-  font-size: 17px;
+ul.topnav li a {display: inline-block;color: #000;text-align: center;padding: 14px 16px;
+    text-decoration: none;transition: 0.3s;font-size: 17px;
 }
 
 ul.topnav li a:hover {background-color: #555;}
-
 ul.topnav li.icon {display: none;}
-
-
 @media screen and (max-width:680px) {
   ul.topnav li:not(:first-child) {display: none;}
-  ul.topnav li.icon {
-    float: right;
-    display: inline-block;
+  ul.topnav li.icon {float: right;display: inline-block;
   }
 }
 
