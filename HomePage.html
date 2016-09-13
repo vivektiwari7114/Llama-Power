@@ -4,7 +4,9 @@
     <title>Llama To Rescue</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <!-- INLINE CSS TO OPTIMIZE CSS DELIVERY -->
-   
+   <link href="css/common.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+         <link href="images/meetLlama.jpg" rel="shortcut icon">
     <style>
         body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
     body, html {height: 100%;color: #777;line-height: 1.8;}
@@ -19,30 +21,15 @@
     .bgimg-4 {background-image: url("images/yourself.jpg");min-height: 400px;}
     .Llama-wide {letter-spacing: 10px;}
     .Llama-hover-opacity {cursor: pointer;}
+    /*HIDE PARALLAX EFFECTS ON MOBILE DEVICE*/
+    @media only screen and (max-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+        background-attachment: scroll;
+    }
+    }
     </style>
 </head>
 <body>
-    <noscript id="deferred-download">
-    <link href="css/common.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href=
-    "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"
-    rel="stylesheet">
-         <link href="images/meetLlama.jpg" rel="shortcut icon">
-    </noscript> 
-    <script>
-      var loadDeferredStyles = function() {
-        var addStylesNode = document.getElementById("deferred-download");
-        var replacement = document.createElement("div");
-        replacement.innerHTML = addStylesNode.textContent;
-        document.body.appendChild(replacement)
-        addStylesNode.parentElement.removeChild(addStylesNode);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-      else window.addEventListener('load', loadDeferredStyles);
-    </script> <!-- NAVIGATION BAR SIT ON TOP -->
     <div class="Llama-top Llama-center">
         <ul class="topnav" id="myTopnav">
             <li>
@@ -283,8 +270,7 @@
     "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type=
     "text/javascript">
     </script> 
-    <script src="jsFiles/smoothscroll.js" type="text/javascript">
-    </script> 
+   
     <script>
         
     /* MODAL POPUP FOR VIEWING ENEMIES */
@@ -327,6 +313,9 @@
         x.className = "topnav";
         }
     }
+        
     </script>
+     <script src="jsFiles/smoothscroll.js" type="text/javascript">
+    </script> 
 </body>
 </html>
