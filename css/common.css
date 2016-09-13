@@ -92,7 +92,9 @@ ul.Llama-ul li:last-child{border-bottom:none}
 .Llama-tooltip,.Llama-display-container{position:relative}
 .Llama-fluid{max-width:100%;height:auto}
 .Llama-banner-content{color: white;font-size: 3.2em;}
-.Llama-pos-main{top:150px; text-align: center;vertical-align: middle;}
+.Llama-pos-top{margin-top:170px;}
+.white-color{color:white;}
+.Llama-pos-main{ text-align: center;vertical-align: middle;}
 .Llama-pos-title{ font-size: 1.2em;!important}
 .Llama-tooltip:hover .Llama-text{display:inline-block}
 .Llama-navbar{list-style-type:none;margin:0;padding:0;overflow:hidden}
